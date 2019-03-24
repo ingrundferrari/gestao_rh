@@ -3,7 +3,7 @@ from .models import Documento
 from django.views.generic import CreateView
 
 
-class DocumentCreate(CreateView):
+class DocumentoCreate(CreateView):
     model = Documento
     fields = ['descricao', 'arquivo']
 

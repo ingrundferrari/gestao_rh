@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import DocumentCreate
+from .views import DocumentoCreate
 
 urlpatterns = [
-    path('novo/<int:funcionario_id>', DocumentCreate.as_view(), name='create_document'),
+     path('novo/<int:funcionario_id>/', DocumentoCreate.as_view(), name='create_documento'),
 ]

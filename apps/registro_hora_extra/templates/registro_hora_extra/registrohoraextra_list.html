@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+
+{% block main %}
+    Banco de Horas
+        </br>
+    
+    {% for registro_re in object_list %}
+        {{ registro_re }}
+
+        </br>
+    {% endfor %}
+    <!-- <a href="{% url 'create_funcionario' %}" class="btn btn-info" >Novo Funcionário</a> -->
+{% endblock main %}
+    

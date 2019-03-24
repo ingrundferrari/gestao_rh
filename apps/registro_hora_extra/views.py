@@ -3,7 +3,8 @@ from .models import RegistroHoraExtra
 from django.http import HttpResponse
 from django.views.generic import ListView
 #, UpdateView, DeleteView, CreateView
-#from django.urls import reverse_lazy
+from django.urls import reverse_lazy
+from django.views import View
 
 
 class HoraExtraList(ListView):
@@ -11,4 +12,4 @@ class HoraExtraList(ListView):
 
     def get_queryset(self):
         empresa_logada = self.request.user.funcionario.empresa
-        return RegistroHoraExtra.object.filter(funcionario__empresa=empresa_logada)
+        return RegistroHoraExtra.objects.filter(funcionario__empresa=empresa_logada)

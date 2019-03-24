@@ -1,7 +1,7 @@
 from django.db import models
-from apps.funcionarios.models import Funcionario
 from django.shortcuts import reverse
 
+from apps.funcionarios.models import Funcionario
 
 
 class Documento(models.Model):
